@@ -3,7 +3,7 @@
     <h1>{{title}}</h1>
     {{health}}
     {{stamina}}
-    <button  @click="attacked(damage)">damage</button>
+    <button  @click="attack(damage)">damage</button>
     {{damage}}
     <div id="game-wrapper"></div>
   </div>
@@ -24,14 +24,12 @@ export default {
     })
   },
   methods:{
-     ...mapMutations({
-      attacked: 'game/attacked' // map `this.add()` to `this.$store.commit('increment')`
+     ...mapMutations('game',{
+      attacked: 'attacked' // map `this.add()` to `this.$store.commit('increment')`
     }),
-    // attack (damage) {
-      // console.log("hi")
-      // attacked(damage);
-      // this.$store.commit('attacked',damage)
-    // }
+    attack (damage) {
+      this.attacked(damage);
+    }
   },
   data:function(){
     return{

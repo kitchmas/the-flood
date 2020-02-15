@@ -23,7 +23,7 @@ const actions = {
 // mutations
 const mutations = {
   attacked (state, damage) {
-    state.health = state.health -  damage
+    state.health = state.health - damage
   }
 }
 
