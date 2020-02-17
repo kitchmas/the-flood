@@ -1,58 +1,95 @@
 <template>
-  <div class="frame">
-    <h1>{{title}}</h1>
-    {{health}}
-    {{stamina}}
-    <button  @click="attack(damage)">damage</button>
-    {{damage}}
-    <div id="game-wrapper"></div>
+  <div class="grid">
+    <header>
+      <Status></Status>
+    </header>
+    <!-- <aside class="sidebar-left">
+    Left Sidebar
+    </aside>-->
+    <article>
+      <Location></Location>
+    </article>
+    <aside class="sidebar-right">
+      <Inventory></Inventory>
+    </aside>
+    <footer>
+      <BottomMenu></BottomMenu>
+    </footer>
   </div>
 </template>
 
 <script>
-import { mapGetters, mapState, mapMutations } from 'vuex'
+import Status from "./stats/Stats.vue";
+import Location from "./location/Location.vue";
+import Inventory from "./inventory/Inventory.vue";
+import BottomMenu from "./bottomMenu/BottomMenu.vue";
+import { mapGetters, mapMutations } from "vuex";
+import generateLocations from "../models/locationGenerator";
 
 export default {
-  name: 'Flood',
-   computed: {
-    ...mapState({
-      health: state => state.game.health,
-      stamina: state  => state.game.stamina
-    }),
-    ...mapGetters('game', {
-       damage: 'getHealthLost'
+  name: "Flood",
+  components: {
+    Status,
+    Location,
+    Inventory,
+    BottomMenu
+  },
+  created() {
+    this.setLocations(generateLocations());
+  },
+  computed: {
+    ...mapGetters("game", {
+      damage: "getHealthLost"
     })
   },
-  methods:{
-     ...mapMutations('game',{
-      attacked: 'attacked' // map `this.add()` to `this.$store.commit('increment')`
-    }),
-    attack (damage) {
+  methods: {
+    ...mapMutations("game", ["attacked", "setLocations"]),
+    attack(damage) {
       this.attacked(damage);
     }
   },
-  data:function(){
-    return{
-    title:"The Flood"
-    }
+  data: function() {
+    return {
+      title: "The Flood"
+    };
   },
   props: {
     msg: String
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1{
-  text-align: center;
+.grid {
+  height: 750px;
+  width: 750px;
+  display: grid;
+  grid-template-columns: 600px 150px;
+  grid-template-rows: auto 600px auto;
+  grid-gap: 0;
 }
 
-#game-wrapper{
-  height: 470px;
-  width: 470px;
-  margin: 0 auto;
-  border: 2px solid black;
+header,
+footer {
+  grid-column: 1 / 3;
 }
 
+.aside {
+  height: 600px;
+}
+
+@media all and (max-width: 700px) {
+  aside,
+  article {
+    grid-column: 1 / 3;
+  }
+}
+
+header,
+aside,
+article,
+footer {
+  border: 1px solid black;
+}
 </style>
