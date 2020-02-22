@@ -3,8 +3,8 @@ export default function(){
         {
             id:1,
             name:"Forest",
-            items:[{id:1, name:"tree", size:"large"},
-            {id:2, name:"tree", size:"large"},
+            items:[{id:1, name:"Tree", size:"large"},
+            {id:2, name:"Tree", size:"large"},
             {id:3, name:"plant", size:"small"}],
             creatures:[{id:1, name:"fox", size:"normal"},
             {id:2, name:"bird", size:"normal"}]
@@ -12,8 +12,8 @@ export default function(){
          {
             id:2,
             name:"Forest",
-            items:[{id:1, name:"tree", size:"large"},
-            {id:2, name:"tree", size:"large"},
+            items:[{id:1, name:"Tree", size:"large"},
+            {id:2, name:"Tree", size:"large"},
             {id:3, name:"plant", size:"small"}],
             creatures:[{id:1, name:"fox", size:"normal"},
             {id:2, name:"bird", size:"normal"}]
@@ -21,8 +21,8 @@ export default function(){
          {
             id:3,
             name:"Forest",
-            items:[{id:1, name:"tree", size:"large"},
-            {id:2, name:"tree", size:"large"},
+            items:[{id:1, name:"Tree", size:"large"},
+            {id:2, name:"Tree", size:"large"},
             {id:3, name:"plant", size:"small"}],
             creatures:[{id:1, name:"fox", size:"normal"},
             {id:2, name:"bird", size:"normal"}]
@@ -30,8 +30,8 @@ export default function(){
          {
             id:4,
             name:"Forest",
-            items:[{id:1, name:"tree", size:"large"},
-            {id:2, name:"tree", size:"large"},
+            items:[{id:1, name:"Tree", size:"large"},
+            {id:2, name:"Tree", size:"large"},
             {id:3, name:"plant", size:"small"}],
             creatures:[{id:1, name:"fox", size:"normal"},
             {id:2, name:"bird", size:"normal"}]
@@ -39,8 +39,8 @@ export default function(){
          {
             id:5,
             name:"Forest",
-            items:[{id:1, name:"tree", size:"large"},
-            {id:2, name:"tree", size:"large"},
+            items:[{id:1, name:"Tree", size:"large"},
+            {id:2, name:"Tree", size:"large"},
             {id:3, name:"plant", size:"small"}],
             creatures:[{id:1, name:"fox", size:"normal"},
             {id:2, name:"bird", size:"normal"}]
@@ -48,15 +48,15 @@ export default function(){
          {
             id:6,
             name:"Home",
-            items:[{id:1, name:"tree", size:"large"},
+            items:[{id:1, name:"Tree", size:"large"},
             {id:3, name:"plant", size:"small"}],
             creatures:[]
          },
          {
             id:7,
             name:"Forest",
-            items:[{id:1, name:"tree", size:"large"},
-            {id:2, name:"tree", size:"large"},
+            items:[{id:1, name:"Tree", size:"large"},
+            {id:2, name:"Tree", size:"large"},
             {id:3, name:"plant", size:"small"}],
             creatures:[{id:1, name:"fox", size:"normal"},
             {id:2, name:"bird", size:"normal"}]
@@ -64,8 +64,8 @@ export default function(){
          {
             id:8,
             name:"Forest",
-            items:[{id:1, name:"tree", size:"large"},
-            {id:2, name:"tree", size:"large"},
+            items:[{id:1, name:"Tree", size:"large"},
+            {id:2, name:"Tree", size:"large"},
             {id:3, name:"plant", size:"small"}],
             creatures:[{id:1, name:"fox", size:"normal"},
             {id:2, name:"bird", size:"normal"}]
@@ -73,8 +73,8 @@ export default function(){
          {
             id:9,
             name:"Forest",
-            items:[{id:1, name:"tree", size:"large"},
-            {id:2, name:"tree", size:"large"},
+            items:[{id:1, name:"Tree", size:"large"},
+            {id:2, name:"Tree", size:"large"},
             {id:3, name:"plant", size:"small"}],
             creatures:[{id:1, name:"fox", size:"normal"},
             {id:2, name:"bird", size:"normal"}]
@@ -82,8 +82,8 @@ export default function(){
          {
             id:10,
             name:"Forest",
-            items:[{id:1, name:"tree", size:"large"},
-            {id:2, name:"tree", size:"large"},
+            items:[{id:1, name:"Tree", size:"large"},
+            {id:2, name:"Tree", size:"large"},
             {id:3, name:"plant", size:"small"}],
             creatures:[{id:1, name:"fox", size:"normal"},
             {id:2, name:"bird", size:"normal"}]
@@ -91,8 +91,8 @@ export default function(){
          {
             id:11,
             name:"Forest",
-            items:[{id:1, name:"tree", size:"large"},
-            {id:2, name:"tree", size:"large"},
+            items:[{id:1, name:"Tree", size:"large"},
+            {id:2, name:"Tree", size:"large"},
             {id:3, name:"plant", size:"small"}],
             creatures:[{id:1, name:"fox", size:"normal"},
             {id:2, name:"bird", size:"normal"}]

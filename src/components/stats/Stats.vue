@@ -14,7 +14,7 @@
 import { mapState } from "vuex";
 
 export default {
-  name: "Heade",
+  name: "Status",
   computed: {
     ...mapState("game", ["date","health", "stamina"])
   }

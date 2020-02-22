@@ -23,6 +23,7 @@ import Status from "./stats/Stats.vue";
 import Location from "./location/Location.vue";
 import Inventory from "./inventory/Inventory.vue";
 import BottomMenu from "./bottomMenu/BottomMenu.vue";
+
 import { mapGetters, mapMutations } from "vuex";
 import generateLocations from "../models/locationGenerator";
 
