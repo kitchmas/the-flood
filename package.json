@@ -36,7 +36,10 @@
     },
     "rules": {
       "no-console": 1,
-      "no-debugger": 1
+      "no-debugger": 1,
+      "vue/no-unused-components": ["error", {
+        "ignoreWhenBindingPresent": true
+      }]
     }
   },
   "browserslist": [

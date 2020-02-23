@@ -2,18 +2,20 @@
     <div class="location">
         <!-- <div class="top">{{currentLocation.name}}</div> -->
         <div class="middle">
-        <Component :is="currentLocation.items[0].name"></Component>
+
+        <Component v-for="item in currentLocation.items" v-bind:key="item.id" :is="item.name" :size="item.size"></Component>
         </div>
         <div class="bottom earth"></div>
     </div>
 </template>
 <script>
 import { mapState } from 'vuex';
-import Tree from "../naturalItems/Tree.vue"
+import Tree from "../naturalItems/Tree.vue";
+import Plant from "../naturalItems/Plant.vue";
 
 export default {
     name:"Location",
-    components:{Tree},
+    components:{Tree,Plant},
     data:function(){
         return{
             tree:"Tree"
