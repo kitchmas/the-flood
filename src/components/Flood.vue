@@ -63,8 +63,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .grid {
-  height: 750px;
-  width: 750px;
+  max-height: 750px;
+  max-width: 750px;
   display: grid;
   grid-template-columns: 600px 150px;
   grid-template-rows: auto 600px auto;

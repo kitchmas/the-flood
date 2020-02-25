@@ -7,7 +7,7 @@ const state = {
   maxHealth:10,
   maxStamina:10,
   date:{day:1,month:1},
-  inventory:[{id:1,name:"shirt"},{id:2,name:"trousers"},{id:3,name:"boots"}],
+  inventory:[{id:1,name:"shirt",quantity:1},{id:2,name:"trousers",quantity:1},{id:3,name:"boots",quantity:1}],
   locations:[],
   currentLocation:{}
 }
@@ -33,12 +33,25 @@ const mutations = {
   attacked (state, damage) {
     state.health = state.health - damage
   },
+  addMultipleToInventory(state,items){
+    items.forEach(item => {
+      var index = state.inventory.findIndex(i => i.id == item.id);
+      if(index > -1){
+        state.inventory[index].quantity += item.quantity;
+      }
+      else
+        state.inventory.push(Object.assign({},item));
+   });
+  },
   addToInventory(state,item){
     var index = state.inventory.findIndex(i => i.id == item.id);
     if(index > -1)
-      state.inventory[index].quantity = item.quantity;
+      state.inventory[index].quantity += item.quantity;
     else
-      state.inventory.push(item);
+    state.inventory.push(Object.assign({},item));
+  },
+  decreaseStamina(state,val){
+    state.stamina = state.stamina - val;
   }
 }
 

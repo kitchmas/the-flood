@@ -1,40 +1,29 @@
 <template>
   <div class="item">
-    <div class="tree" v-if="size === 'large'">
-      <div>Tree</div>
-      <div>Tree</div>
-      <div>Tree</div>
-      <div>Tree</div>
-      <div>Tree</div>
-    </div>
+    <Item name="Tree" optionName="Chop" :itemsDropped="itemsDropped" :maxHealth="health" :staminaCost="staminaCost">
+      <img src="../../assets/tree.128.png" alt />
+    </Item>
   </div>
 </template>
 <script>
+import Item from "./Item.vue"; 
+
 export default {
   name: "Tree",
+  components: {
+    Item
+  },
   props: {
     size: String
+  },
+  data() {
+    return {
+      itemsDropped: [{ id: 4, name: "wood", quantity: 1 }],
+      health: 3,
+      staminaCost:1
+    };
   }
 };
 </script>
 <style scoped>
-.tree div{
-    text-align: center;
-    line-height: 100%;
-}
-.tree :nth-last-child(1){
- font-size: 6px;
-}
-.tree :nth-last-child(2){
- font-size: 28px;
-}
-.tree :nth-last-child(3){
- font-size: 18px;
-}
-.tree :nth-last-child(4){
- font-size: 12px;
-}
-.tree :nth-last-child(5){
- font-size: 6px;
-}
 </style>

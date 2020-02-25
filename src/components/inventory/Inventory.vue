@@ -1,7 +1,7 @@
 <template>
   <ul>
     <li v-for="item in inventory" v-bind:key="item.id">
-        {{item.name}}
+        {{item.name}} x {{item.quantity}}
     </li>
   </ul>
 </template>
