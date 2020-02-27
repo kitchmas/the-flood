@@ -18,7 +18,7 @@ export default {
   },
   data() {
     return {
-      itemsDropped: [{ id: 4, name: "wood", quantity: 1 }],
+      itemsDropped: [{ id: "1Wood", name: "Wood", quantity: 1 }],
       health: 3,
       staminaCost:1
     };

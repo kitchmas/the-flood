@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <li v-for="item in inventory" v-bind:key="item.id">
+    <li v-for="(item, index) in inventory" v-bind:key="item.id + index">
         {{item.name}} x {{item.quantity}}
     </li>
   </ul>

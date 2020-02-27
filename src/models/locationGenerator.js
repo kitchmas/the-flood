@@ -1,39 +1,42 @@
 export default function(){
     var locations = [
         {
-            id:1,
+            id:"location1",
             name:"Forest",
-            items:[{id:1, name:"Tree", size:"large"},
-            {id:2, name:"Tree", size:"large"},
-            {id:3, name:"Plant", size:"small"}],
-            creatures:[{id:1, name:"fox", size:"normal"},
-            {id:2, name:"bird", size:"normal"}]
+            items:[{id:"1Tree", name:"Tree", size:"large"},
+            {id:"2Tree", name:"Tree", size:"large"},
+            {id:"1Plant", name:"Plant", size:"small"}],
+            creatures:[{id:"1Fox", name:"Fox", size:"normal"},
+            {id:"1Bird", name:"Bird", size:"normal"}]
          },
          {
-            id:2,
-            name:"Forest",
-            items:[{id:1, name:"Tree", size:"large"},
-            {id:2, name:"Tree", size:"large"},
-            {id:3, name:"Plant", size:"small"}],
-            creatures:[{id:1, name:"fox", size:"normal"},
-            {id:2, name:"bird", size:"normal"}]
+            id:"location2",
+            name:"Feild",
+            items:[{id:"1Plant", name:"Plant", size:"small"},
+            {id:"1Plant", name:"Plant", size:"small"},
+            {id:"1Plant", name:"Plant", size:"small"},
+           {id:"1Plant", name:"Plant", size:"small"}]
          },
          {
             id:3,
             name:"Forest",
             items:[{id:1, name:"Tree", size:"large"},
-            {id:2, name:"Tree", size:"large"},
-            {id:3, name:"Plant", size:"small"}],
-            creatures:[{id:1, name:"fox", size:"normal"},
-            {id:2, name:"bird", size:"normal"}]
+            {id:1, name:"Tree", size:"large"},,
+            {id:1, name:"Tree", size:"large"},
+            {id:1, name:"Tree", size:"large"},
+            {id:1, name:"Tree", size:"large"},
+            {id:1, name:"Tree", size:"large"}]
          },
          {
             id:4,
-            name:"Forest",
+            name:"Birds",
             items:[{id:1, name:"Tree", size:"large"},
-            {id:2, name:"Tree", size:"large"},
             {id:3, name:"Plant", size:"small"}],
-            creatures:[{id:1, name:"fox", size:"normal"},
+            creatures:[{id:2, name:"bird", size:"normal"},
+            {id:2, name:"bird", size:"normal"},
+            {id:2, name:"bird", size:"normal"},
+            {id:2, name:"bird", size:"normal"},
+            {id:2, name:"bird", size:"normal"},
             {id:2, name:"bird", size:"normal"}]
          },
          {

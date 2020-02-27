@@ -7,9 +7,10 @@ const state = {
   maxHealth:10,
   maxStamina:10,
   date:{day:1,month:1},
-  inventory:[{id:1,name:"shirt",quantity:1},{id:2,name:"trousers",quantity:1},{id:3,name:"boots",quantity:1}],
+  inventory:[{id:"1Shirt",name:"Shirt",quantity:1},{id:"1Trousers",name:"trousers",quantity:1},{id:"1Boots",name:"boots",quantity:1}],
   locations:[],
-  currentLocation:{}
+  currentLocation:{},
+  selectedWeapon:{id:"1fists",name:"Fists",damage:1}
 }
 
 // getters
@@ -30,8 +31,8 @@ const mutations = {
     state.locations = locations;
     state.currentLocation = state.locations[6];
   },
-  attacked (state, damage) {
-    state.health = state.health - damage
+  playerAttacked(state, damage) {
+    state.health = state.health - damage;
   },
   addMultipleToInventory(state,items){
     items.forEach(item => {

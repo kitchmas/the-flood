@@ -44,7 +44,7 @@ export default {
     })
   },
   methods: {
-    ...mapMutations("game", ["attacked", "setLocations"]),
+    ...mapMutations("game", ["setLocations"]),
     attack(damage) {
       this.attacked(damage);
     }

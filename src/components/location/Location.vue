@@ -3,10 +3,16 @@
     <div class="top">{{currentLocation.name}}</div>
     <div class="middle">
       <Component
-        v-for="item in currentLocation.items"
-        v-bind:key="item.id"
+        v-for="(item, index) in currentLocation.items"
+        v-bind:key="item.id + index"
         :is="item.name"
         :size="item.size"
+      ></Component>
+       <Component
+        v-for="(creature, index) in currentLocation.creatures"
+        v-bind:key="creature.id + index"
+        :is="creature.name"
+        :size="creature.size"
       ></Component>
     </div>
     <div class="bottom earth"></div>
@@ -16,15 +22,12 @@
 import { mapState } from "vuex";
 import Tree from "../naturalItems/Tree.vue";
 import Plant from "../naturalItems/Plant.vue";
+import Fox from "../creatures/Fox.vue";
+import Bird from "../creatures/Bird.vue"
 
 export default {
   name: "Location",
-  components: { Tree, Plant },
-  data: function() {
-    return {
-      tree: "Tree"
-    };
-  },
+  components: { Tree, Plant, Fox, Bird },
   computed: {
     ...mapState("game", ["currentLocation"])
   }
